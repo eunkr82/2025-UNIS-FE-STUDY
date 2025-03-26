@@ -1,0 +1,67 @@
+body {
+    margin: 30px;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    background: #f5f5f5;
+  }
+  
+  .title {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  
+  .gallery {
+    column-count: 3;
+    column-gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .card {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    break-inside: avoid;
+        /*브라우저가 긴 요소를 별도로 구분하지 않도록*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .card p {
+    padding: 1rem;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  /* 반응형 처리 */
+  @media (max-width: 1000px) {
+    .gallery {
+      column-count: 2;
+    }
+  }
+  @media (max-width: 600px) {
+    .gallery {
+      column-count: 1;
+    }
+  }
+  
+  
+  .skew-prac {
+    width: 100px;
+    height: auto;
+  }
+  .skew-prac:hover {
+    transform: scale(1.3) skewY(45deg);
+  }
