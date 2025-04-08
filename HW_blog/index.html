@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>polaroidArchiving</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+  <div class="login-container">
+    <div class="login-box">
+      <h2>login</h2>
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="비밀번호">
+      <button onclick="goToMain()">로그인</button>
+    </div>
+  </div>
+
+  
+  <div class="main-page" style="display: none;">
+    <div class="header">~**~polaroidArchiving~*~~</div>
+    <div class="content-container">
+      <div class="post-card">
+        <img src=https://i.pinimg.com/736x/8f/76/6d/8f766d9d08767ecb7b14e030153a2f58.jpg alt="이미지">
+        <h3>개발 후기</h3>
+        <p>괜히 욕심 부려서 디카 컨샙 잡았다가 죽을 뻔했다. 재밌긴 했지만, 시간이 부족해서 버튼까지 만들지는 못했고, 폰트도 빈약해서 아쉽다. js를 배우고 기능을 추가하면서 더 다듬어볼까 싶다. 레이아웃 공부는 진짜 엄청 했다. 이게 마진이 겹치는 거구나 ~ 아 화면을 비율로 나눈 거니까 이 요소에 포함해야 하는구나 등등등 역시 만들고싶은 게 생기니까 강제로 공부가 된다 굿굿</p>
+      </div>
+      <div class="sidebar">
+        <button>개발 새발</button>
+        <button>2025 독서목록</button>
+        <button>나락도 락이다</button>
+        <button>일기클럽</button>
+        <button>입 복싱</button>
+       
+    <div class="polaroid-player">
+      <div class="viewfinder">
+        <img src="https://i.pinimg.com/736x/36/c1/0e/36c10ece20b2a513edbe82a9053a6293.jpg" alt="디카 이미지" />
+      
+        <div class="cam-info">
+          <div class="meta-line">ISO125 &nbsp; 0EV &nbsp; 1250 F2.8</div>
+          <div class="meta-line date">2024. 5. 13 &nbsp; 5:29AM</div>
+        </div>
+  
+        <div class="caption">“ Loading ... ”</div>
+    </div>
+  </div>
+  
+  </div>
+  
+    </div>
+  
+  </div>
+  
+      </div> 
+    </div>   
+    </div>
+  </div>
+
+  <script>
+    function goToMain() {
+      document.querySelector('.login-container').style.display = 'none';
+      document.querySelector('.main-page').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
