@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f6f6f5;
+    color: #333;
+  }
+  
+  /* 로그인 페이지 스타일 */
+  .login-page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background: #8780f3;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  
+  .login-container input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #0041cd;
+    border-radius: 6px;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #005eff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-container button:hover {
+    background-color: #1a56d0;
+  }
+  
+  /* 메인 페이지 스타일 */
+  .main-header {
+    background-color: #2b72ff;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .author {
+    font-weight: 300;
+  }
+  
+  .blog-container {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .blog-content {
+    flex: 2;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .blog-content h2 {
+    color: #2b72ff;
+    font-weight: 700;
+  }
+  
+  .blog-content p {
+    line-height: 1.6;
+  }
+  
+  .blog-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-list {
+    flex: 1;
+    min-width: 200px;
+    background: #eef3fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .blog-list h3 {
+    color: #2b72ff;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .blog-list ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .blog-list li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #2b72ff;
+    border-radius: 5px;
+  }
+  
