@@ -1,1 +1,48 @@
-D
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-pink-600 mb-4 text-center">Today's To-Do List</h1>
+        <div class="flex mb-4">
+            <input id="taskInput" type="text" placeholder="새로운 일정을 입력하세요!" 
+                class="flex-1 p-3 rounded-l-2xl border-2 border-pink-300 focus:outline-none">
+            <button onclick="addTask()" class="bg-pink-400 text-white p-3 rounded-r-2xl hover:bg-pink-500">Add</button>
+        </div>
+        <ul id="taskList" class="space-y-2"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskList = document.getElementById('taskList');
+            
+            if (taskInput.value.trim() !== '') {
+                const listItem = document.createElement('li');
+                listItem.className = "bg-pink-200 flex justify-between items-center p-3 rounded-xl shadow-md";
+                
+                const taskText = document.createElement('span');
+                taskText.textContent = taskInput.value;
+                
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = "text-pink-600 font-bold hover:text-pink-800";
+                deleteButton.onclick = function() {
+                    listItem.remove();
+                };
+
+                listItem.appendChild(taskText);
+                listItem.appendChild(deleteButton);
+                taskList.appendChild(listItem);
+
+                taskInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
