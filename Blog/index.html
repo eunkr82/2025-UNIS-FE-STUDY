@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>블로그</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:lemonchiffon;
+    }
+
+    .login-page {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 100px auto;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .login-page input {
+      padding: 10px;
+      margin: 10px;
+      width: 150px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-page button {
+      padding: 10px 20px;
+      background-color:cornflowerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-page button:hover {
+      background-color:lightsteelblue;
+    }
+
+    .site-title {
+      text-align: center;
+      padding: 20px;
+      background-color:sandybrown;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .content-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .image-box img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border: 2px solid #ddd;
+    }
+
+    .text-box {
+      display: grid;
+      gap: 10px;
+      max-width: 500px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .post-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .post-body {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .learning-list {
+      padding-left: 20px;
+      color: #555;
+    }
+
+    .author {
+        text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-page">
+    <h2>Login</h2>
+    <input type="text" placeholder="아이디" />
+    <input type="password" placeholder="비밀번호" />
+    <button>로그인</button>
+  </div>
+
+  <div class="main-page" style="display: none;">
+    <header>
+      <h1 class="site-title">www.endProject.com</h1>
+    </header>
+
+    <div class="content-container">
+      <div class="image-box">
+        <img src="ewha.jpg" alt="ewha" width="300">
+      </div>
+
+      <div class="text-box">
+        <h2 class="post-title">💻 UNIS 프론트엔드 스터디 후기</h2>
+        <p class="post-body">
+          UNIS 프론트엔드 스터디를 통해 처음으로 HTML과 CSS를 배웠습니다.
+        </p>
+        <ul class="learning-list">
+            <li>HTML
+              <ul>
+                <li>태그 구조</li>
+              </ul>
+            </li>
+            <br>
+            <li>CSS
+              <ul>
+                <li>선택자</li>
+                <li>박스 모델</li>
+              </ul>
+            </li>
+        </ul>  
+        <p class="post-body">
+            처음으로 배우는 언어라 두려움이 앞섰는데, 내가 작성한 코드가 바로 페이지에 반영되어 보여지는게 좋았다. 익숙해지기 위해 여러번 반복해서 페이지를 만드는 활동을 해봐야겠다고 생각했다.
+        </p>
+        <p class="author">2416023 <strong>정지유</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginBtn = document.querySelector(".login-page button");
+    const loginPage = document.querySelector(".login-page");
+    const mainPage = document.querySelector(".main-page");
+
+    loginBtn.addEventListener("click", () => {
+      loginPage.style.display = "none";
+      mainPage.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
