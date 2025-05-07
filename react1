@@ -1,0 +1,58 @@
+import { useState } from 'react';
+
+function App() {
+  
+  const [words, setWords] = useState([]);
+ 
+  const [eng, setEng] = useState('');
+  const [kor, setKor] = useState('');
+
+  // 단어 추가 버튼 클릭 시 실행
+  const addWord = () => {
+    if (eng.trim() === '' || kor.trim() === '') return;
+
+    const newWord = {
+      eng,
+      kor, 
+    };
+
+    setWords([...words, newWord]);
+    setEng('');
+    setKor('');
+  };
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <h1>📚 나만의 단어장</h1>
+
+      {/* 입력 폼 */}
+      <input
+        placeholder="영어"
+        value={eng}
+        onChange={(e) => setEng(e.target.value)}
+      />
+      <input
+        placeholder="뜻"
+        value={kor}
+        onChange={(e) => setKor(e.target.value)}
+      />
+      <button onClick={addWord}>추가하기</button>
+
+      <hr />
+
+      {/* 단어 목록 */}
+      <h2>📝 단어 목록:</h2>
+      <ul>
+        {words.map((word) => (
+          <li key={word.id}>
+            {word.eng}
+            {' - '}
+            {word.showMeaning ? word.kor : '뜻 보기'}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
