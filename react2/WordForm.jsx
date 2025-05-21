@@ -2,8 +2,8 @@ import { useState } from "react";
 
 
 function WordForm(props) {
-  const [word, setWord] = useState("");       // 단어 입력 상태
-  const [meaning, setMeaning] = useState(""); // 뜻 입력 상태
+  const [word, setWord] = useState("");       
+  const [meaning, setMeaning] = useState(""); 
 
   // 근데 안됨 이상함!!!!
   const handleSubmit = (event) => {
